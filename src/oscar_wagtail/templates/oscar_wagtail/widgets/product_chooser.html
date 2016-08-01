@@ -1,0 +1,9 @@
+{% extends "wagtailadmin/widgets/chooser.html" %}
+
+{% block chooser_class %}product-chooser{% endblock %}
+
+{% block chosen_state_view %}
+    <span class="title">{{ product }}</span>
+{% endblock %}
+
+{% block edit_chosen_item_url %}Wijzig{% endblock %}

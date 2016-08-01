@@ -1,0 +1,17 @@
+{% load i18n %}
+{% trans "Choose a product" as choose_str %}
+{% include "wagtailadmin/shared/header.html" with title=choose_str subtitle=snippet_type_name icon="snippet" %}
+
+    <section id="search" class="active nice-padding">
+        <form class="product-search search-bar" action="{% url 'oscar_wagtail:product_choose' %}" method="GET" autocomplete="off">
+            <ul class="fields">
+                {% for field in searchform %}
+                    {% include "wagtailadmin/shared/field_as_li.html" with field=field %}
+                {% endfor %}
+                <li class="submit"><input type="submit" value="{% trans 'Search' %}" /></li>
+            </ul>
+        </form>
+        <div id="product-results">
+    	    {% include "oscar_wagtail/chooser/product_results.html" with choosing=1 %}
+        </div>
+    </section>

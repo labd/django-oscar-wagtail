@@ -1,0 +1,29 @@
+{% load i18n %}
+
+{% url "oscar_wagtail:product_choose" as linkurl %}
+
+<table class="listing" id="product-chooser-list" data-url="{{ linkurl }}">
+    <col />
+    <col  />
+    <col width="16%" />
+    <thead>
+        <tr class="table-headers">
+            <th>{% trans "Title" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in items %}
+            <tr>
+                <td class="title">
+                    {% if choosing %}
+                        <h2><a class="product-choice" href="{% url 'oscar_wagtail:product_chosen' product.pk %}">{{ product }}</a></h2>
+                    {% else %}
+                        <h2><a href="{% url 'dashboard:catalogue-product' product.pk %}">{{ product }}</a></h2>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% include "wagtailadmin/shared/pagination_nav.html" with items=items is_ajax=1 %}
