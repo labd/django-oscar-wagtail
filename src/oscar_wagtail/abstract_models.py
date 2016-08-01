@@ -27,7 +27,6 @@ class AbstractCategory(Page):
     ]
 
     settings_panels = [
-        FieldPanel('publish_revision_at'),
         PublishingPanel(),
     ]
 
