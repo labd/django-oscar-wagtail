@@ -9,7 +9,6 @@ from wagtail.wagtailcore.models import Page
 
 
 class AbstractCategory(Page):
-    parent_page_types = ['catalogue.Category']
     subpage_types = []
     is_creatable = False
 
@@ -39,9 +38,8 @@ class AbstractCategory(Page):
         return super(AbstractCategory, self).save(*args, **kwargs)
 
     def serve(self, request, *args, **kwargs):
-        cls = get_class('catalogue.views', 'CategoryView')
+        cls = get_class('catalogue.views', 'CatalogueView')
         response = cls.as_view()(request, category=self, **kwargs)
-        self.publish_new_revision()
         return response
 
     def get_ancestors_and_self(self):
