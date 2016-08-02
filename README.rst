@@ -14,7 +14,7 @@ using the AbstractCategory from Oscar use the one from this project.
 
 Add the following to your settings
 
-code-block:: python
+.. code-block:: python
 
     OSCAR_DASHBOARD_NAVIGATION.insert(1, {
         'label': 'CMS',
