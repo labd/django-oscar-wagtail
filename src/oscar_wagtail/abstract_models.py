@@ -9,10 +9,7 @@ from wagtail.wagtailcore.models import Page
 
 
 class AbstractCategory(Page):
-    subpage_types = []
     is_creatable = False
-
-    publish_revision_at = models.DateTimeField(null=True, blank=True)
 
     description = RichTextField(_('Description'), blank=True)
     name = models.CharField(_('Name'), max_length=255, db_index=True)
