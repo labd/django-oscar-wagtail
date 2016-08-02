@@ -11,11 +11,38 @@ This project integrates the Wagtail CMS with Django Oscar for eCommerce.
 Installation
 ------------
 
+Presuming you have installed Django-Oscar and Wagtail into your Django project.
+
+First install django-oscar-wagtail via PIP:
+
+.. code-block:: bash
+
+    pip install django-oscar-wagtail
+
+And add ``oscar_wagtail`` to your settings as follows:
+
+.. code-block:: python
+
+    INSTALLED_APPS = [
+        # ... your other aps
+        'oscar_wagtail',
+    ]
+
 Fork the catalogue app as described in the oscar documentation. Then instead of
-using the AbstractCategory from Oscar use the one from this project. 
+using the AbstractCategory from Oscar use the one from this project as follows:
+
+.. code-block:: python
+
+    from oscar_wagtail.abstract_models import AbstractCategory
 
 
-Add the following to your settings
+    class Category(AbstractCategory):
+        pass
+
+    from oscar.apps.catalogue.models import * 
+
+
+If you want to have a CMS button in the Oscar dashboard, add the following to your settings:
 
 .. code-block:: python
 
