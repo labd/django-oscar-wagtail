@@ -15,7 +15,7 @@ Special thanks to `Michael van Tellingen`_, as he did most of the work :-).
 Background
 ----------
 
-Lab Digital has been using `Oscar Commerce`_ and `Wagtail CMS`_ for several 
+`Lab Digital`_ has been using `Oscar Commerce`_ and `Wagtail CMS`_ for several 
 years. Usually for different types of projects; Oscar for complex e-commerce 
 cases and Wagtail for content-heavy sites.
 
@@ -42,6 +42,7 @@ Getting started
 
 Please have a look at the `README`_ in the git repository.
 
+.. _Lab Digital: http://labdigital.nl/
 .. _Oscar Commerce: https://github.com/django-oscar/django-oscar
 .. _Wagtail CMS: https://github.com/torchbox/wagtail
 .. _Michael van Tellingen: https://github.com/mvantellingen/
