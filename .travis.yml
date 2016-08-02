@@ -1,9 +1,17 @@
 language: python
+cache: pip
+sudo: false
+
 install:
   - pip install tox
-script:
-  - tox
+
 env:
   - TOXENV=py27
+    python: 2.6
   - TOXENV=py34
+    python: 3.4
   - TOXENV=py35
+    python: 3.5
+
+script:
+  - tox
