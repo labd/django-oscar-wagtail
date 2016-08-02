@@ -24,11 +24,11 @@ And add ``oscar_wagtail`` to your settings as follows:
 .. code-block:: python
 
     INSTALLED_APPS = [
-        # ... your other aps
+        # ... your other apps
         'oscar_wagtail',
     ]
 
-Fork the catalogue app as described in the oscar documentation. Then instead of
+Fork the catalogue app as described in the `oscar documentation`_. Then instead of
 using the AbstractCategory from Oscar use the one from this project as follows:
 
 .. code-block:: python
@@ -53,3 +53,4 @@ If you want to have a CMS button in the Oscar dashboard, add the following to yo
         'access_fn': lambda user, *args: user.has_perm('wagtailadmin.access_admin')
     })
 
+.. _oscar documentation: http://django-oscar.readthedocs.io/en/latest/topics/fork_app.html
