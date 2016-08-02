@@ -1,7 +1,7 @@
 Introducting Django Oscar Wagtail
 =================================
 
-Lab Digital is pleased to introduce django-oscar-wagtail; an integration app 
+`Lab Digital`_ is pleased to introduce django-oscar-wagtail; an integration app 
 that allows Oscar Commerce developers to add a very mature CMS system to 
 their applications, and Wagtail CMS developers to add a very powerful 
 e-commerce engine to their platforms.
@@ -15,7 +15,7 @@ Special thanks to `Michael van Tellingen`_, as he did most of the work :-).
 Background
 ----------
 
-`Lab Digital`_ has been using `Oscar Commerce`_ and `Wagtail CMS`_ for several 
+We have been using `Oscar Commerce`_ and `Wagtail CMS`_ for several 
 years. Usually for different types of projects; Oscar for complex e-commerce 
 cases and Wagtail for content-heavy sites.
 
