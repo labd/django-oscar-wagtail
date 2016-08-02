@@ -12,7 +12,7 @@ docs_require = [
 tests_require = [
     'pytest-cov>=2.2.0',
     'pytest-django==2.9.1',
-    'pytest-pythonpaths==0.7',
+    'pytest-pythonpath==0.7',
     'pytest>=2.8.3',
 
     # Linting

@@ -1,0 +1,14 @@
+# Exclude everything by default
+exclude *
+recursive-exclude * *
+
+include MANIFEST.in
+include README.rst
+include CHANGES
+include setup.py
+
+graft src/
+
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
