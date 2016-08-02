@@ -4,7 +4,11 @@ Django Oscar Wagtail
 .. image:: https://travis-ci.org/LabD/django-oscar-wagtail.svg?branch=travis
     :target: https://travis-ci.org/LabD/django-oscar-wagtail
     
-This project integrates the Wagtail CMS with Django Oscar for eCommerce.
+This project integrates the Wagtail CMS with Django Oscar for eCommerce. It
+adds the following features:
+
+- each Oscar category page can now be managed by the Wagtail CMS
+- it is possible to add product lists to wagtail pages
 
 
 
