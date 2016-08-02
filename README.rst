@@ -1,6 +1,9 @@
 Django Oscar Wagtail
 ====================
 
+.. image:: https://travis-ci.org/LabD/django-oscar-wagtail.svg?branch=travis
+    :target: https://travis-ci.org/LabD/django-oscar-wagtail
+    
 This project integrates the Wagtail CMS with Django Oscar for eCommerce.
 
 
