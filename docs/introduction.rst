@@ -1,4 +1,4 @@
-Introducting Django Oscar Wagtail
+Introducing Django Oscar Wagtail
 =================================
 
 `Lab Digital`_ is pleased to introduce django-oscar-wagtail; an integration app 
@@ -7,7 +7,8 @@ their applications, and Wagtail CMS developers to add a very powerful
 e-commerce engine to their platforms.
 
 Both projects are very important to us. We are therefore pleased to be able
-to contribute something back both communities by means of this project.
+to contribute something back both communities by means of this project. And 
+there is more where that came from! ;-).
 
 Special thanks to `Michael van Tellingen`_, as he did most of the work :-).
 
