@@ -24,7 +24,7 @@ tests_require = [
 
 setup(
     name='django-oscar-wagtail',
-    version='0.0.3',
+    version='0.0.5',
     description="Integration between Django Oscar and Wagtail",
     long_description=open('README.rst').read(),
     author="Michael van Tellingen",
