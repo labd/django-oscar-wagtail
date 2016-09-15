@@ -1,9 +1,19 @@
 {% extends "wagtailadmin/widgets/chooser.html" %}
+{% load thumbnail %}
 
 {% block chooser_class %}product-chooser{% endblock %}
 
 {% block chosen_state_view %}
-    <span class="title">{{ product }}</span>
+    <div class="title">{{ product.get_title }}</div>
+    {% if product.primary_image %}
+    <div class="image">
+        {% with image=product.primary_image %}
+            {% thumbnail image.original "x155" upscale=False as thumb %}
+            <img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="thumbnail">
+            {% endthumbnail %}
+        {% endwith %}
+    </div>
+    {% endif %}
 {% endblock %}
 
-{% block edit_chosen_item_url %}Wijzig{% endblock %}
+{% block edit_chosen_item_url %}{% if product %}{% url 'dashboard:catalogue-product' product.id %}{% endif %}{% endblock %}
