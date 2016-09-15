@@ -13,11 +13,12 @@ Product = get_model('catalogue', 'Product')
 
 
 def product_choose(request):
+
     queryset = (
-        Product.objects
-        .filter(structure__in=[Product.STANDALONE, Product.CHILD])
-        .available_in_cms()
-        .order_by('title'))
+        Product.objects.get_queryset()
+        .browsable()
+        .order_by('title')
+    )
 
     p = request.GET.get('p', 1)
 
