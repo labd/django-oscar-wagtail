@@ -6,4 +6,4 @@
     <span class="title">{{ product }}</span>
 {% endblock %}
 
-{% block edit_chosen_item_url %}Wijzig{% endblock %}
+{% block edit_chosen_item_url %}{% if product %}{% url 'dashboard:catalogue-product' product.id %}{% endif %}{% endblock %}
