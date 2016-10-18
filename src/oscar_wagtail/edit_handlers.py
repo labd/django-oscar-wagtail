@@ -39,13 +39,8 @@ class PageLinkHandler(_PageLinkHandler):
 
     @staticmethod
     def expand_db_attributes(attrs, for_editor):
-        from oscar_wagtail.models import CategoryBasePage
-
         try:
-            page = Page.objects.get(id=attrs['id'])
-            if issubclass(page.specific_class, CategoryBasePage):
-                page = page.specific
-
+            page = Page.objects.get(id=attrs['id']).specific
             if for_editor:
                 editor_attrs = 'data-linktype="page" data-id="%d" ' % page.id
             else:
