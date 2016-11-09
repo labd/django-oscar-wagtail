@@ -32,6 +32,16 @@ And add ``oscar_wagtail`` to your settings as follows:
         'oscar_wagtail',
     ]
 
+Add the URLs to ``urls.py``:
+
+.. code-block:: python
+
+    import oscar_wagtail.urls
+
+    urlpatterns += [
+        url(r'^api/oscar_wagtail/', include(oscar_wagtail.urls, namespace='oscar_wagtail')),
+    ]
+
 Fork the catalogue app as described in the `oscar documentation`_. Then instead of
 using the AbstractCategory from Oscar use the one from this project as follows:
 
