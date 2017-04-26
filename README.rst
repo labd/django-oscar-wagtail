@@ -3,7 +3,17 @@ Django Oscar Wagtail
 
 .. image:: https://travis-ci.org/LabD/django-oscar-wagtail.svg?branch=travis
     :target: https://travis-ci.org/LabD/django-oscar-wagtail
-    
+
+.. image:: http://codecov.io/github/LabD/django-oscar-wagtail/coverage.svg?branch=master 
+    :target: http://codecov.io/github/LabD/django-oscar-wagtail?branch=master
+
+.. image:: https://readthedocs.org/projects/django-oscar-wagtail/badge/?version=latest
+    :target: https://django-oscar-wagtail.readthedocs.io/en/latest/introduction.html
+
+.. image:: https://img.shields.io/pypi/v/django-oscar-wagtail.svg
+    :target: https://pypi.python.org/pypi/django-oscar-wagtail/
+
+
 This project integrates the Wagtail CMS with Django Oscar for eCommerce. It
 adds the following features:
 
