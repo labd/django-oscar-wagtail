@@ -4,14 +4,14 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 import django.db.models.deletion
-import wagtail.wagtailcore.fields
+import wagtail.core.fields
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
         ('wagtailcore', '0028_merge'),
-        ('catalogue', '0009_slugfield_noop'),
+        ('catalogue', '0013_auto_20170821_1548'),
     ]
 
     operations = [
@@ -48,6 +48,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='category',
             name='description',
-            field=wagtail.wagtailcore.fields.RichTextField(blank=True, verbose_name='Description'),
+            field=wagtail.core.fields.RichTextField(blank=True, verbose_name='Description'),
         ),
     ]

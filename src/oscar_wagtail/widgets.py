@@ -4,7 +4,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 from oscar.core.loading import get_model
-from wagtail.wagtailadmin.widgets import AdminChooser
+from wagtail.admin.widgets import AdminChooser
 
 
 class AdminProductChooser(AdminChooser):

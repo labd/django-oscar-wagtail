@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
 from oscar.core.application import Application
-from wagtail.wagtailcore import urls as wagtail_urls
+from wagtail.core import urls as wagtail_urls
 
 
 class WagtailApplication(Application):

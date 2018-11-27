@@ -1,34 +1,30 @@
 from django.utils.html import escape
-from wagtail.wagtailadmin.edit_handlers import BaseChooserPanel
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.rich_text import PageLinkHandler as _PageLinkHandler
+from wagtail.admin.edit_handlers import BaseChooserPanel
+from wagtail.core.models import Page
+from wagtail.core.rich_text.pages import PageLinkHandler as _PageLinkHandler
 
 from oscar_wagtail import widgets
 
 
-class BaseProductChooserPanel(BaseChooserPanel):
+class ProductChooserPanel(BaseChooserPanel):
     object_type_name = "product"
 
     _target_content_type = None
 
-    @classmethod
-    def widget_overrides(cls):
-        return {
-            cls.field_name: widgets.AdminProductChooser()
-        }
-
-
-class ProductChooserPanel(object):
     def __init__(self, field_name, product_type=None):
-        self.field_name = field_name
+        super().__init__(field_name)
         self.product_type = product_type
 
-    def bind_to_model(self, model):
-        return type(str('_ProductChooserPanel'), (BaseProductChooserPanel,), {
-            'model': model,
-            'field_name': self.field_name,
-            'product_type': self.product_type,
-        })
+    def clone(self):
+        return self.__class__(
+            field_name=self.field_name,
+            product_type=self.product_type,
+        )
+
+    def widget_overrides(self):
+        return {
+            self.field_name: widgets.AdminProductChooser()
+        }
 
 
 class PageLinkHandler(_PageLinkHandler):

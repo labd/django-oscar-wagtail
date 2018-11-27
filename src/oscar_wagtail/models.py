@@ -2,9 +2,9 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
-from wagtail.wagtailadmin.edit_handlers import (FieldPanel, InlinePanel,)
-from wagtail.wagtailcore.models import Orderable
-from wagtail.wagtailsnippets.models import register_snippet
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.core.models import Orderable
+from wagtail.snippets.models import register_snippet
 
 from oscar_wagtail.edit_handlers import ProductChooserPanel
 
@@ -24,7 +24,7 @@ class ProductListSnippet(ClusterableModel):
 
 class ProductListItem(Orderable):
     parent = ParentalKey(to=ProductListSnippet, related_name='items')
-    product = models.ForeignKey('catalogue.Product', related_name='+')
+    product = models.ForeignKey('catalogue.Product', related_name='+', on_delete=models.CASCADE)
 
     panels = [
         ProductChooserPanel('product'),
