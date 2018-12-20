@@ -1,6 +1,6 @@
 from django.utils.functional import cached_property
 from oscar.core.loading import get_model
-from wagtail.wagtailcore import blocks
+from wagtail.core import blocks
 
 
 class ProductChooserBlock(blocks.ChooserBlock):

@@ -4,7 +4,7 @@ Django Oscar Wagtail
 .. image:: https://travis-ci.org/LabD/django-oscar-wagtail.svg?branch=travis
     :target: https://travis-ci.org/LabD/django-oscar-wagtail
 
-.. image:: http://codecov.io/github/LabD/django-oscar-wagtail/coverage.svg?branch=master 
+.. image:: http://codecov.io/github/LabD/django-oscar-wagtail/coverage.svg?branch=master
     :target: http://codecov.io/github/LabD/django-oscar-wagtail?branch=master
 
 .. image:: https://readthedocs.org/projects/django-oscar-wagtail/badge/?version=latest
@@ -49,7 +49,7 @@ Add the URLs to ``urls.py``:
     import oscar_wagtail.urls
 
     urlpatterns += [
-        url(r'^api/oscar_wagtail/', include(oscar_wagtail.urls, namespace='oscar_wagtail')),
+        url(r'^api/oscar_wagtail/', include(oscar_wagtail.urls)),
     ]
 
 Fork the catalogue app as described in the `oscar documentation`_. Then instead of
@@ -63,7 +63,7 @@ using the AbstractCategory from Oscar use the one from this project as follows:
     class Category(AbstractCategory):
         pass
 
-    from oscar.apps.catalogue.models import * 
+    from oscar.apps.catalogue.models import *
 
 
 If you want to have a CMS button in the Oscar dashboard, add the following to your settings:

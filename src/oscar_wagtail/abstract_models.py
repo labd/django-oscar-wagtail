@@ -2,10 +2,10 @@ from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from oscar.core.loading import get_class
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.admin.edit_handlers import (
     FieldPanel, PublishingPanel, RichTextFieldPanel)
-from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailcore.models import Page
+from wagtail.core.fields import RichTextField
+from wagtail.core.models import Page
 
 
 class AbstractCategory(Page):
